@@ -42,6 +42,10 @@ def checkout():
 def thankyou():
     return render_template('thankyou.html')
 
+@app.route('/user')
+def user():
+    return render_template('user.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

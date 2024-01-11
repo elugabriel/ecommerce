@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>SignUp Form</title>
+    <title>Login Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="application/x-javascript">
@@ -25,41 +25,27 @@
 <body>
     <!-- main -->
     <div class="main-w3layouts wrapper">
-        <h1>SignUp Form</h1>
+        <h1>Login Form</h1>
         <div class="main-agileinfo">
             <div class="agileits-top">
-                <form action="#" method="post">
-                    <input class="text" type="text" name="firstname" placeholder="First Name" required="">
-                    <br>
-					<br>
-                    <input class="text" type="text" name="lastname" placeholder="Last Name" required="">
-                    <br><br>
-                    <input class="text" type="text" name="phone" placeholder="Phone Number" required="">
-                    <br><br>
-                    <input class="text" type="text" name="address" placeholder="Address" required="">
-                    <br><br>
-                    <input class="text" type="text" name="state" placeholder="State" required="">
-                    <br>
+                <form action="{{ url_for('login') }}" method="post">
+                    <!-- Update the form action to point to the /login route -->
+
                     <input class="text email" type="email" name="email" placeholder="Email" required="">
-                    
                     <input class="text" type="password" name="password" placeholder="Password" required="">
-                
-                    <input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
-                 
+
                     <div class="wthree-text">
                         <label class="anim">
-                            <input type="checkbox" class="checkbox" required="">
-                            <span>I Agree To The Terms & Conditions</span>
+
                         </label>
                         <div class="clear"> </div>
                     </div>
-                    <input type="submit" value="SIGNUP">
+                    <input type="submit" value="LOGIN"> <!-- Update the value to "LOGIN" -->
+
                 </form>
-                <p>Already have an Account? <a href="{{ url_for('login') }}"> Login Now!</a></p>
+                <p>Don't have an Account? <a href="{{ url_for('user') }}"> SignUp/a></p>
             </div>
         </div>
-
-       
     </div>
     <!-- //main -->
 </body>
